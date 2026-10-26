@@ -1,0 +1,1 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const html=fs.readFileSync('web/index.html','utf8');test('Website has title',()=>assert.match(html,/<title>.+<\/title>/));test('Website has heading',()=>assert.match(html,/<h1>.+<\/h1>/));test('Website has version',()=>assert.match(html,/id="version"/));
